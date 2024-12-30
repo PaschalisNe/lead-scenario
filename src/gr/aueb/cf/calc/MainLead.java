@@ -10,6 +10,13 @@ public class MainLead {
     public static int sub(int a, int b){
         return a - b;
     }
-    public static int div(int a, int b) { return a / b; }
 
+    public static int div(int a, int b) {
+        try {
+            return a / b;
+        } catch (ArithmeticException e) {
+            System.out.println("Error. denominator must not be zero");
+            throw e;
+        }
+    }
 }
